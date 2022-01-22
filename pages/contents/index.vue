@@ -15,7 +15,7 @@
           :class="{ 'is-active': isOpen[index] }"
           @click="handleToggle(index)"
         >
-          <span v-text="item.name" />
+          <span v-text="item.name"  />
         </button>
         <transition
           name="topSlide"
@@ -25,6 +25,13 @@
           @leave="leave"
         > 
           <v-container class="topSlide" v-show="isOpen[index]">
+            <iframe class="topSlide"
+            width="560"
+            height="315"
+            src= "https://www.youtube.com/embed/WYDzyIgOezQ"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            ></iframe>
             <iframe class="topSlide"
             width="560"
             height="315"
@@ -278,7 +285,4 @@ export default {
   animation-fill-mode: both;
 }
 
-.vodeo{
-
-}
 </style>
