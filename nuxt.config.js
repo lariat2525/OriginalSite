@@ -9,7 +9,7 @@ export default {
     titleTemplate: "%s - OriginalSite",
     title: "OriginalSite",
     htmlAttrs: {
-      lang: "en",
+      lang: "ja",
     },
     meta: [
       { charset: "utf-8" },
@@ -18,6 +18,7 @@ export default {
       { name: "format-detection", content: "telephone=no" },
     ],
     link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    //世界地図用css
     link: [
       {
         rel: "stylesheet",
