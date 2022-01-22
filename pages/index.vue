@@ -11,7 +11,7 @@
 
 <script>
 import CountryBar from "~/components/Body/CountryBar";
-console.log(CountryBar);
+
 export default {
   components: {
     CountryBar
