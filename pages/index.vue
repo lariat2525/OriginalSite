@@ -2,20 +2,27 @@
 <body>
   <div class="content">
     <div class="world_map"></div>
-    <div class="country_table"></div>
+    <div class="country_table">
+      <CountryBar />
+    </div>
   </div>
 </body>
 </template>
 
 <script>
+import CountryBar from "~/components/Body/CountryBar";
+console.log(CountryBar);
 export default {
-  name: "IndexPage"
+  components: {
+    CountryBar
+  }
 };
 </script>
 <style lang="scss" scoped>
 .content {
   display: flex;
   height: 100%;
+  color: black;
   .world_map {
     width: 75%;
     background: #777;
