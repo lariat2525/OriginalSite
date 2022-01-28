@@ -4,16 +4,17 @@ const app = express(); //expressをappと定義
 const mysql = require("mysql"); //今回はMySQLを利用する
 const connection = mysql.createConnection({
   // 以下、各自のMySQLへの接続情報を書く
-  host: "localhost",
-  user: "root",
+  host: "db",
+  user: "user",
   password: "admin123",
-  database: "test_table",
+  database: "sample",
+  port:3306
 });
 
 app.get("/", function (req, res) {
   // app.get...(expressの構文)、req=request。 res=response
   res.set({ "Access-Control-Allow-Origin": "*" }); // この記載により、※1：CORSを許可する
-  connection.query("select * from test_", function (error, results) {
+  connection.query("select * from employee;", function (error, results) {
     // scrapingsテーブルから全てのカラムを取得する
     if (error) throw error; // エラー処理
     res.send(results); // results[0]により、一番目のデータを返答する
