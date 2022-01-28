@@ -1,6 +1,5 @@
 ## Enviroment
-- Node：16.10.0
-[Node.js v16.10.0 インストーラリンク](https://nodejs.org/download/release/v16.10.0/)
+- Node：16.10.0 ([Node.js v16.10.0 インストーラリンク](https://nodejs.org/download/release/v16.10.0/))
 
 ## Getting Started
 
