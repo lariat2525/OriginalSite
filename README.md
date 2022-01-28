@@ -1,3 +1,7 @@
+## Enviroment
+- Node：16.10.0
+[Node.js v16.10.0 インストーラリンク](https://nodejs.org/download/release/v16.10.0/)
+
 ## Getting Started
 
 本リポジトリをクローン後、以下コマンドを順に実行してください。
@@ -5,13 +9,11 @@
 ```bash
 ## 初回のみ実行
 npm install
-cd model
-npm install
 
-# backend & db起動
-cd model
+# db起動
+cd db
 docker-compose up
 
-# frontend 起動
+# アプリサーバー起動
 npm run dev
 ```
