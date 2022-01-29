@@ -3,26 +3,22 @@
 // The variables you want to modify
 // $font-size-root: 20px;
 
-$material-light: (
-  'background': #f0f0f0
-);
-
 $grid-breakpoints: (
   'tablet': 1024px,
   'mobile': 600px
 );
 
 $display-breakpoints: (
-  // tablet size 以上
+  // tablet size より大きい
   'tablet-and-up':
-  'only screen and (min-width: #{map-get($grid-breakpoints, 'tablet')})',
-  // tablet size 未満
+  'only screen and (min-width: #{map-get($grid-breakpoints, 'tablet') + 1})',
+  // tablet size 以下
   'tablet-and-down':
-  'only screen and (max-width: #{map-get($grid-breakpoints, 'tablet') - 1})',
-  //// mobile size 以上
+  'only screen and (max-width: #{map-get($grid-breakpoints, 'tablet')})',
+  // mobile size より大きい
   'mobile-and-up':
-  'only screen and (min-width: #{map-get($grid-breakpoints, 'mobile')})',
-  // mobile size 未満
+  'only screen and (min-width: #{map-get($grid-breakpoints, 'mobile') + 1})',
+  // mobile size 以下
   'mobile-and-down':
-  'only screen and (max-width: #{map-get($grid-breakpoints, 'mobile') - 1})'
+  'only screen and (max-width: #{map-get($grid-breakpoints, 'mobile')})'
 );
