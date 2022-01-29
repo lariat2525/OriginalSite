@@ -18,24 +18,3 @@ export const country_data = {
     { id: 6, name: "ヨーロッパ" }
   ],
 };
-console.log(country_data);
-// contry_type1:北アメリカ,contry_type2:アジア,contry_type3:ヨーロッパ,contry_type4:オセアニア,contry_type5:アフリカ,contry_type6:南アメリカ　country_bar
-
-// country: [
-//   { name: "アメリカ", country_type: 1 },
-//   { name: "日本", country_type: 2 },
-//   { name: "イタリア", country_type: 3 },
-//   { name: "オーストラリア", country_type: 4 },
-//   { name: "エジプト", country_type: 5 },
-//   { name: "中国", country_type: 2 },
-//   { name: "サウジアラビア", country_type: 2 },
-//   { name: "カナダ", country_type: 1 }
-// ],
-// type: [
-//   "北アメリカ",
-//   "アジア",
-//   "オセアニア",
-//   "アフリカ",
-//   "南アメリカ",
-//   "ヨーロッパ"
-// ]

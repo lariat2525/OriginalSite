@@ -1,39 +1,41 @@
 <template>
   <div id="app">
-  <div v-for="continent in computedContinents" :key="continent">
-    {{continent.name}}
-    <ul>
-      <li  v-for="country in continent.countries" :key="country">
-      {{country}}
-      </li>
-    </ul>
+    <div v-for="continent in computedContinents" :key="continent.id">
+      {{ continent.name }}
+      <ul>
+        <li v-for="country in continent.countries" :key="country">
+          {{ country }}
+        </li>
+      </ul>
+    </div>
   </div>
-  </div>
-
 </template>
+
 <script>
-import { country_data } from "~/components/nisiyama_data.js";
-console.log(country_data);
-//配列そのまま表示してるだけだから注意
-//function ここで呼ぶ
+import { country_data } from "./nisiyama_data";
+
 export default {
   name: "App",
   data() {
     return {
-      country_data
+      country_data: country_data,
     };
   },
-computed:{
-  computedPrice(){
-    const continents = this.countriy_data.continent.map((continentValue, continentIndex)=>{
-      const countries = this.countriy_data.country.reducer((prev, current)=>{
-        return current.continent_id = continentIndex? prev.push(current.name) :prev
-      }, [])
-      return {name: continentValue.name, countries:countries}
-    })
-    return continents
-  }
-}
+  computed: {
+    computedContinents() {
+      const continents = this.country_data.continent.map((continentValue) => {
+        const countries = this.country_data.country.reduce((prev, current) => {
+          const { continent_id, name } = current
+          if(continent_id === continentValue.id){
+            prev.push(name)
+          }
+          return prev
+        },[]);
+        return { id: continentValue.id, name: continentValue.name, countries: countries };
+      });
+
+      return continents
+    },
+  },
 };
-//この下でfunction定義？？
 </script>
